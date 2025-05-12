@@ -24,6 +24,7 @@ namespace StarterAssets
 		public void OnMove(InputValue value)
 		{
 			MoveInput(value.Get<Vector2>());
+			Debug.Log("move");
 		}
 
 		public void OnLook(InputValue value)
@@ -42,6 +43,7 @@ namespace StarterAssets
 		public void OnSprint(InputValue value)
 		{
 			SprintInput(value.isPressed);
+			Debug.Log("f");
 		}
 #endif
 
