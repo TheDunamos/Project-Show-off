@@ -20,8 +20,7 @@ namespace StarterAssets
 		public bool cursorLocked = true;
 		public bool cursorInputForLook = true;
 
-		[Header("Interaction Triggers")]
-		public bool leverRegion = false;
+		[Header("Interact")]
 		public bool interact = false;
 
 
@@ -94,18 +93,7 @@ namespace StarterAssets
 
 
 
-		void OnTriggerEnter(Collider other)
-		{
-			if (other.gameObject.CompareTag("Lever"))
-			{
-				leverRegion = true;
-			}
-		}
-
-        private void OnTriggerExit(Collider other)
-        {
-			leverRegion = false;
-        }
+		
     }
 	
 }

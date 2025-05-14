@@ -46,10 +46,6 @@ namespace StarterAssets
         [Tooltip("Time required to pass before entering the fall state. Useful for walking down stairs")]
         public float FallTimeout = 0.15f;
 
-        [Header("Interactions")]
-        public bool DoorOpen = false;
-        public GameObject door1;
-
         [Header("Player Grounded")]
         [Tooltip("If the character is grounded or not. Not part of the CharacterController built in grounded check")]
         public bool Grounded = true;
@@ -163,7 +159,6 @@ namespace StarterAssets
             JumpAndGravity();
             GroundedCheck();
             Move();
-            LeverSwitch();
         }
 
         private void LateUpdate()
@@ -353,17 +348,6 @@ namespace StarterAssets
             }
         }
 
-        private void LeverSwitch()
-        {
-            Animator doorAnim = door1.GetComponent<Animator>();
- 
-            if (_input.interact == true && _input.leverRegion == true)
-            {
-                DoorOpen = true;
-
-                doorAnim.SetTrigger("Open");
-            }
-        }
 
         private static float ClampAngle(float lfAngle, float lfMin, float lfMax)
         {
