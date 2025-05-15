@@ -11,15 +11,29 @@ namespace StarterAssets
 
         [Header("Light Player")]
         public bool lightInteract = false;
+        private bool Door1Light = false;
 
 
         [Header("Dark Player")]
         public bool darkInteract = false;
-
+        private bool Door1Dark = false;
 
         [Header("Interactions")]
-        public bool DoorOpen = false;
+        public bool interact = false;
         public GameObject door1;
+
+
+        [Header("Double Button Door")]
+        public GameObject pressure1;
+        public GameObject pressure2;
+        public GameObject door2;
+        bool door2Open = false;
+
+
+
+        public GameObject pressure3;
+        public GameObject pressure4;
+        public GameObject cloudWall;
 
 
         private PlayerInput _playerInput;
@@ -35,10 +49,18 @@ namespace StarterAssets
         }
         private void Update()
         {
-            LeverSwitch();
+            LeverDoor();
+            DoubleDoor();
         }
 
-
+        public void OnInteract(InputValue value)
+        {
+            InteractInput(value.isPressed);
+        }
+                public void InteractInput(bool newInteractState)
+        {
+            interact = newInteractState;
+        }
 
         void OnTriggerEnter(Collider other)
         {
@@ -50,11 +72,17 @@ namespace StarterAssets
             {
                 darkInteract = true;
             }
+            
+            if(other.gameObject == pressure1 || other.gameObject == pressure2)
+            {
+               
+            }
+
         }
 
         private void OnTriggerExit(Collider other)
         {
-            if (lightPlayer == true)
+            if (other.gameObject.CompareTag("InteractLight"))
             {
                 lightInteract = false;
             }
@@ -65,14 +93,28 @@ namespace StarterAssets
 
         }
 
-        private void LeverSwitch()
+        private void DoubleDoor()
+        {
+            Animator doorAnim2 = door2.GetComponent <Animator>();
+
+            
+        }
+
+
+        private void LeverDoor()
         {
             Animator doorAnim = door1.GetComponent<Animator>();
 
-            if (_input.interact == true && lightInteract == true)
+            if (interact == true && lightInteract == true)
             {
-                DoorOpen = true;
-
+                Door1Light = true;
+            }
+            if (interact == true && darkInteract == true)
+            {
+                Door1Dark = true;
+            }
+            if (Door1Light == true && Door1Dark == true)
+            {
                 doorAnim.SetTrigger("Open");
             }
         }
