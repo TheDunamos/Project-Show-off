@@ -25,7 +25,9 @@ namespace StarterAssets
 
         [Header("Double Button Door")]
         public GameObject pressure1;
+        bool pressed1 = false;
         public GameObject pressure2;
+        bool pressed2 = false;
         public GameObject door2;
         bool door2Open = false;
 
@@ -49,8 +51,8 @@ namespace StarterAssets
         }
         private void Update()
         {
-            LeverDoor();
-            DoubleDoor();
+           LeverDoor();
+           DoubleDoor();
         }
 
         public void OnInteract(InputValue value)
@@ -73,9 +75,9 @@ namespace StarterAssets
                 darkInteract = true;
             }
             
-            if(other.gameObject == pressure1 || other.gameObject == pressure2)
+            if(other.gameObject == pressure1  )
             {
-               
+                door2Open = true;
             }
 
         }
@@ -86,16 +88,21 @@ namespace StarterAssets
             {
                 lightInteract = false;
             }
-            if (lightPlayer == false)
+            if (other.gameObject.CompareTag("InteractDark"))
             {
                 darkInteract = false;
             }
+            if (other.gameObject == pressure1);
 
         }
 
         private void DoubleDoor()
         {
             Animator doorAnim2 = door2.GetComponent <Animator>();
+            if(door2Open == true)
+            {
+
+            }
 
             
         }
