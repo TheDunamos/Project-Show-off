@@ -2,15 +2,24 @@ using UnityEngine;
 
 public class PushBigBlock : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public bool inCollider = false;
+
+    void OnTriggerEnter(Collider other)
     {
-        
+        if (other.gameObject.CompareTag("Player"))
+        {
+            inCollider = true;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerExit(Collider other)
     {
-        
+        if (other.gameObject.CompareTag("Player"))
+        {
+            inCollider = false;
+        }
     }
+
+
+    // get other objects "interact" value from InteractinChecks, use update to check if interact and inCollider are true. set anim bool to true.
 }
