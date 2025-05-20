@@ -1,91 +1,89 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using StarterAssets;
 
 
-namespace StarterAssets
+public class InteractionChecks : MonoBehaviour
 {
-    public class InteractionChecks : MonoBehaviour
+    [Header("Player Select")]
+    public bool lightPlayer = true;
+
+    [Header("Light Player")]
+    public bool lightInteract = false;
+
+    [Header("Dark Player")]
+    public bool darkInteract = false;
+
+    [Header("Interactions")]
+    public bool interact = false;
+    public GameObject FirstDoor;
+
+
+
+    private PlayerInput _playerInput;
+    private StarterAssetsInputs _input;
+    private CharacterController _controller;
+
+    private void Start()
     {
-        [Header("Player Select")]
-        public bool lightPlayer = true;
+        _input = GetComponent<StarterAssetsInputs>();
+        _controller = GetComponent<CharacterController>();
+        _playerInput = GetComponent<PlayerInput>();
 
-        [Header("Light Player")]
-        public bool lightInteract = false;
+    }
+    private void Update()
+    {
+        LeverDoor();
+    }
 
-        [Header("Dark Player")]
-        public bool darkInteract = false;
+    public void OnInteract(InputValue value)
+    {
+        InteractInput(value.isPressed);
+    }
+            public void InteractInput(bool newInteractState)
+    {
+        interact = newInteractState;
+    }
 
-        [Header("Interactions")]
-        public bool interact = false;
-        public GameObject FirstDoor;
-
-
-
-        private PlayerInput _playerInput;
-        private StarterAssetsInputs _input;
-        private CharacterController _controller;
-
-        private void Start()
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("InteractLight"))
         {
-            _input = GetComponent<StarterAssetsInputs>();
-            _controller = GetComponent<CharacterController>();
-            _playerInput = GetComponent<PlayerInput>();
-
+            lightInteract = true;
         }
-        private void Update()
+        if (other.gameObject.CompareTag("InteractDark"))
         {
-           LeverDoor();
+            darkInteract = true;
         }
-
-        public void OnInteract(InputValue value)
-        {
-            InteractInput(value.isPressed);
-        }
-                public void InteractInput(bool newInteractState)
-        {
-            interact = newInteractState;
-        }
-
-        void OnTriggerEnter(Collider other)
-        {
-            if (other.gameObject.CompareTag("InteractLight"))
-            {
-                lightInteract = true;
-            }
-            if (other.gameObject.CompareTag("InteractDark"))
-            {
-                darkInteract = true;
-            }
             
 
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("InteractLight"))
+        {
+            lightInteract = false;
+        }
+        if (other.gameObject.CompareTag("InteractDark"))
+        {
+            darkInteract = false;
         }
 
-        private void OnTriggerExit(Collider other)
+
+    }
+
+    private void LeverDoor()
+    {
+        DoorOpening door1 = FirstDoor.GetComponent(typeof(DoorOpening)) as DoorOpening;
+
+        if (interact == true && lightInteract == true)
         {
-            if (other.gameObject.CompareTag("InteractLight"))
-            {
-                lightInteract = false;
-            }
-            if (other.gameObject.CompareTag("InteractDark"))
-            {
-                darkInteract = false;
-            }
-
-
+            door1.OpenLight = true;
         }
-
-        private void LeverDoor()
+        if (interact == true && darkInteract == true)
         {
-            DoorOpening door1 = FirstDoor.GetComponent(typeof(DoorOpening)) as DoorOpening;
-
-            if (interact == true && lightInteract == true)
-            {
-                door1.OpenLight = true;
-            }
-            if (interact == true && darkInteract == true)
-            {
-                door1.OpenDark = true;
-            }
+            door1.OpenDark = true;
         }
     }
 }
