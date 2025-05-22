@@ -5,11 +5,11 @@ public class PushBigBlock : MonoBehaviour
 {
     public GameObject player;
     public bool inCollider = false;
-
+    public string PlaySelect;
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag(PlaySelect) )
         {
             inCollider = true;
         }
@@ -18,7 +18,7 @@ public class PushBigBlock : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag(PlaySelect))
         {
             inCollider = false;
         }

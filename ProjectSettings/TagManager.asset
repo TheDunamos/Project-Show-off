@@ -8,6 +8,10 @@ TagManager:
   - Door
   - InteractLight
   - InteractDark
+  - Player2
+  - VarManager
+  - PickupP1
+  - PickupP2
   layers:
   - Default
   - TransparentFX

@@ -14,7 +14,7 @@ public class WallPlates : MonoBehaviour
             door1.Open1 = true;
             Debug.Log("Open");
         }
-        if (other.gameObject.CompareTag("Player") && Plate1 == false)
+        if (other.gameObject.CompareTag("Player2") && Plate1 == false)
         {
             door1.Open2 = true;
             Debug.Log("Open2");
@@ -28,7 +28,7 @@ public class WallPlates : MonoBehaviour
             door1.Open1 = false;
             Debug.Log("Close");
         }
-        if (other.gameObject.CompareTag("Player") && Plate1 == false)
+        if (other.gameObject.CompareTag("Player2") && Plate1 == false)
         {
             door1.Open2 = false;
             Debug.Log("Close2");

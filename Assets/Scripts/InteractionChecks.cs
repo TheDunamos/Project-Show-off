@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 using StarterAssets;
 
 
+
 public class InteractionChecks : MonoBehaviour
 {
     [Header("Player Select")]
@@ -19,31 +20,60 @@ public class InteractionChecks : MonoBehaviour
     public GameObject FirstDoor;
 
 
-
+    private GameObject VarManager;
+    private GameObject Block1;
     private PlayerInput _playerInput;
     private StarterAssetsInputs _input;
     private CharacterController _controller;
+    private Rigidbody rib;
+    private Component AnchorScript;
+    private Component BobnScript;
 
     private void Start()
     {
+
         _input = GetComponent<StarterAssetsInputs>();
         _controller = GetComponent<CharacterController>();
         _playerInput = GetComponent<PlayerInput>();
+        VarManager = GameObject.FindGameObjectWithTag("VarManager");
 
     }
     private void Update()
     {
+
         LeverDoor();
-    }
+/*        PickupThrow();
+*/    }
 
     public void OnInteract(InputValue value)
     {
         InteractInput(value.isPressed);
     }
-            public void InteractInput(bool newInteractState)
+    public void InteractInput(bool newInteractState)
     {
         interact = newInteractState;
     }
+
+   /* private void PickupThrow()
+    {
+        GlobalVars Vars = VarManager.GetComponent(typeof(GlobalVars)) as GlobalVars;
+
+        if(Vars.P1Carry == true && interact == true)
+        {
+            
+            Block1 = GameObject.FindGameObjectWithTag("PickupP1");
+            BlockAnchor AnchorScript = Block1.GetComponentInChildren(typeof(BlockAnchor)) as BlockAnchor;
+            BlockBobn BobnScript = Block1.GetComponentInChildren(typeof(BlockBobn)) as BlockBobn;
+            
+            rib = Block1.GetComponentInChildren<Rigidbody>();
+            Destroy(AnchorScript);
+            Destroy(BobnScript);
+            rib.AddForce (10,0,0);
+            rib.isKinematic = true;
+
+            Debug.Log("AAAAAH");
+        }
+    }*/
 
     void OnTriggerEnter(Collider other)
     {
@@ -55,8 +85,6 @@ public class InteractionChecks : MonoBehaviour
         {
             darkInteract = true;
         }
-            
-
     }
 
     private void OnTriggerExit(Collider other)
@@ -70,8 +98,9 @@ public class InteractionChecks : MonoBehaviour
             darkInteract = false;
         }
 
-
     }
+
+
 
     private void LeverDoor()
     {

@@ -12,7 +12,7 @@ public class PressurePlate : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
         PressureDoor door1 = door.GetComponent(typeof(PressureDoor)) as PressureDoor;
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("Player2"))
         {
             door1.Opened = true;
             Debug.Log("Open");
@@ -21,7 +21,7 @@ public class PressurePlate : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         PressureDoor door1 = door.GetComponent(typeof(PressureDoor)) as PressureDoor;
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("Player2"))
         {
             door1.Opened = false;
             Debug.Log("Close");
