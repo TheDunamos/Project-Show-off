@@ -264,6 +264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 2026303933}
+  Plate1: 1
 --- !u!1 &163289568
 GameObject:
   m_ObjectHideFlags: 0
@@ -713,7 +714,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 2126106211}
   inCollider: 0
-  PlaySelect: 
+  PlaySelect: Player
 --- !u!1001 &311054922
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8367,6 +8368,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 2026303933}
+  Plate1: 0
 --- !u!1001 &1100832614
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11815,7 +11817,7 @@ Transform:
   m_GameObject: {fileID: 1867883922}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.6593466, y: 2.93, z: 51.37}
+  m_LocalPosition: {x: 5.6593466, y: 4.08, z: -4.83}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

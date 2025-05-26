@@ -4,7 +4,7 @@ public class WallPlates : MonoBehaviour
 {
 
     public Component door;
-    private bool Plate1 = false;
+    public bool Plate1 = false;
 
     private void OnTriggerStay(Collider other)
     {
