@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4015881976819831598}
   - component: {fileID: 942525061781226560}
   m_Layer: 0
-  m_Name: Fog Hard
+  m_Name: FogHard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
