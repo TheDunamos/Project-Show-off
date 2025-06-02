@@ -1052,6 +1052,22 @@
                     "isOR": false
                 }
             ]
+        },
+        {
+            "name": "Keyboard&Mouse1",
+            "bindingGroup": "Keyboard&Mouse1",
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<Mouse>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
         }
     ]
 }

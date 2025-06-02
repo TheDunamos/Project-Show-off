@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
+using StarterAssets;
 
 public class Movement3 : MonoBehaviour
 {
@@ -8,9 +10,13 @@ public class Movement3 : MonoBehaviour
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
     bool jumped;
-
+    private StarterAssetsInputs _input;
     Vector3 velocity;
 
+    private void Start()
+    {
+        _input = GetComponentInParent<StarterAssetsInputs>();
+    }
 
     void Update()
     {
@@ -24,13 +30,13 @@ public class Movement3 : MonoBehaviour
         }
 
 
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        if (_input.jump && isGrounded)
         {
             anim.SetBool("jumpAnim", true);
             Invoke("jumpTimer", 0.4f);
         }
 
-        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
+        if (_input.move != Vector2.zero)
         {
             anim.SetFloat("Speed", 0.5f);
         }
