@@ -12,6 +12,7 @@ TagManager:
   - VarManager
   - PickupP1
   - PickupP2
+  - Bridge
   layers:
   - Default
   - TransparentFX
