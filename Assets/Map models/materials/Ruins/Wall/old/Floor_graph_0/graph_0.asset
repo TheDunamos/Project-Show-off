@@ -127,7 +127,10 @@ MonoBehaviour:
   PhysicalSize: {x: 0, y: 0, z: 0}
   EnablePhysicalSize: 0
   Thumbnail: 
-  CurrentStatePreset: 
+  CurrentStatePreset: " <sbspreset pkgurl=\"pkg://Substance_graph\" label=\"\" >\n 
+    <presetinput identifier=\"$outputsize\" uid=\"3795302352\" type=\"8\" value=\"10,10\"
+    />\n  <presetinput identifier=\"outputcolor\" uid=\"2200365022\" type=\"3\" value=\"0.628931,0.628931,0.628931,1\"
+    />\n </sbspreset>\n"
   IsRuntimeOnly: 0
   GenerateAllOutputs: 0
   GenerateAllMipmaps: 1
@@ -237,7 +240,7 @@ MonoBehaviour:
             output image
           Type: 3
           WidgetType: 3
-        Data: {x: 0.869565, y: 0.774704, z: 0.774704, w: 1}
+        Data: {x: 0.6289307, y: 0.6289307, z: 0.6289307, w: 1}
         NumericalDescription:
           DefaultValue: {x: 0.869565, y: 0.774704, z: 0.774704, w: 1}
           MinValue: {x: 0, y: 0, z: 0, w: 0}

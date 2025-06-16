@@ -6,7 +6,12 @@ TagManager:
   tags:
   - CinemachineTarget
   - Door
-  - Lever
+  - InteractLight
+  - InteractDark
+  - Player2
+  - VarManager
+  - PickupP1
+  - PickupP2
   layers:
   - Default
   - TransparentFX
@@ -18,10 +23,10 @@ TagManager:
   - DayWorld
   - NightWorld
   - Player2
-  - 
-  - 
-  - 
-  - 
+  - CamP1
+  - CamP2
+  - SeeingDay
+  - SeeingNight
   - 
   - 
   - 
