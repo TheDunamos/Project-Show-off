@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Events;
 using StarterAssets;
 
 
@@ -28,6 +29,10 @@ public class InteractionChecks : MonoBehaviour
     private Rigidbody rib;
     private Component AnchorScript;
     private Component BobnScript;
+
+
+    public UnityEvent onPlayerOnBridge;
+    public UnityEvent onPlayerOffBridge;
 
     private void Start()
     {
@@ -77,6 +82,7 @@ public class InteractionChecks : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        print(other.gameObject.name);
         if (other.gameObject.CompareTag("InteractLight"))
         {
             lightInteract = true;
@@ -84,6 +90,10 @@ public class InteractionChecks : MonoBehaviour
         if (other.gameObject.CompareTag("InteractDark"))
         {
             darkInteract = true;
+        }
+        if (other.gameObject.CompareTag("Bridge"))
+        {
+            onPlayerOnBridge?.Invoke();
         }
     }
 
@@ -97,7 +107,10 @@ public class InteractionChecks : MonoBehaviour
         {
             darkInteract = false;
         }
-
+        if (other.gameObject.CompareTag("Bridge"))
+        {
+            onPlayerOffBridge?.Invoke();
+        }
     }
 
 
