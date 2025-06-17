@@ -6,6 +6,8 @@ public class PushBigBlock : MonoBehaviour
     public GameObject player;
     public bool inCollider = false;
     public string PlaySelect;
+    public int moveLayer;
+    public bool layerSwitched = false;
 
     void OnTriggerEnter(Collider other)
     {
@@ -34,8 +36,12 @@ public class PushBigBlock : MonoBehaviour
         if (inCollider == true && checking.interact == true)
         {
             blockAnim.SetTrigger("Moved");
-        }
 
+        }
+        if(layerSwitched == true)
+        {
+            gameObject.layer = moveLayer;
+        }
     }
 
 }

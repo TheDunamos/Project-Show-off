@@ -65,7 +65,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 935158dc8754feb4a92110569dc1aa3f, type: 2}
+  - {fileID: 2100000, guid: 54ff26654c999f84d9284bfb9280fc3b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: 2115858875071190899}
   - component: {fileID: 6834704446247121085}
   m_Layer: 0
-  m_Name: PickupAnchor
+  m_Name: PickupAnchor 1
   m_TagString: PickupP1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -150,4 +150,4 @@ MonoBehaviour:
   xOff: 0
   yOff: 2.5
   zOff: 0
-  playerTag: Player
+  playerTag: Player2

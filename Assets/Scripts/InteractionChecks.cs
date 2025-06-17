@@ -9,6 +9,10 @@ public class InteractionChecks : MonoBehaviour
 {
     [Header("Player Select")]
     public bool lightPlayer = true;
+    public GameObject PRoot1;
+    public GameObject blockDark;
+    public GameObject PRoot2;
+    public GameObject blockLight;
 
     [Header("Light Player")]
     public bool lightInteract = false;
@@ -47,8 +51,9 @@ public class InteractionChecks : MonoBehaviour
     {
 
         LeverDoor();
-/*        PickupThrow();
-*/    }
+
+        PickupThrow();
+    }
 
     public void OnInteract(InputValue value)
     {
@@ -59,26 +64,28 @@ public class InteractionChecks : MonoBehaviour
         interact = newInteractState;
     }
 
-   /* private void PickupThrow()
+    private void PickupThrow()
     {
         GlobalVars Vars = VarManager.GetComponent(typeof(GlobalVars)) as GlobalVars;
+        PRoot1 = GameObject.FindGameObjectWithTag("Player");
+        PRoot2 = GameObject.FindGameObjectWithTag("Player2");
+        blockDark = Vars.blockDark;
+        blockLight = Vars.blockLight;
 
-        if(Vars.P1Carry == true && interact == true)
+
+        if (Vars.P1Throwable == true && interact == true && lightPlayer == true)
         {
-            
-            Block1 = GameObject.FindGameObjectWithTag("PickupP1");
-            BlockAnchor AnchorScript = Block1.GetComponentInChildren(typeof(BlockAnchor)) as BlockAnchor;
-            BlockBobn BobnScript = Block1.GetComponentInChildren(typeof(BlockBobn)) as BlockBobn;
-            
-            rib = Block1.GetComponentInChildren<Rigidbody>();
-            Destroy(AnchorScript);
-            Destroy(BobnScript);
-            rib.AddForce (10,0,0);
-            rib.isKinematic = true;
+            Instantiate(blockDark, transform.position + Vars.offset, transform.rotation);
 
             Debug.Log("AAAAAH");
         }
-    }*/
+        if (Vars.P2Throwable == true && interact == true && lightPlayer == false)
+        {
+            Instantiate(blockLight, transform.position + Vars.offset, transform.rotation);
+
+            Debug.Log("AAAAAH2");
+        }
+    }
 
     void OnTriggerEnter(Collider other)
     {

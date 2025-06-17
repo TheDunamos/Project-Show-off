@@ -21,7 +21,8 @@ public class CamTransition : MonoBehaviour
         }
         if (other.gameObject.CompareTag("Player2"))
         {
-
+            cam3.SetActive(false);
+            cam4.SetActive(true);
         }
     }
 }
