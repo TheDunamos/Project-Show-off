@@ -14,6 +14,7 @@ public class PickupItem : MonoBehaviour
     public bool Player1 = false;
     public GameObject armature1;
 
+
     public bool Player2 = false;
     public GameObject armature2;
 
@@ -26,22 +27,27 @@ public class PickupItem : MonoBehaviour
     private void Start()
     {
         VarManager = GameObject.FindGameObjectWithTag("VarManager");
-
     }
 
     private void OnTriggerStay(Collider other)
     {
         InteractionChecks Player = other.gameObject.GetComponent(typeof(InteractionChecks)) as InteractionChecks;
         GlobalVars Vars = VarManager.GetComponent(typeof(GlobalVars)) as GlobalVars;
+
         if (Player.lightPlayer == true && Player.interact == true && Vars.P1Carry == false){
             Player1 = true;
             Vars.P1Carry = true;
             Instantiate(whiteCube);
+            Debug.Log("P1PickedUp");
+            Vars.delayTimerP1 = Vars.delayP1;
         }
         if(Player.lightPlayer == false && Player.interact == true && Vars.P2Carry == false)
         {
             Player2 = true;
             Vars.P2Carry = true;
+            Instantiate(blackCube);
+            Debug.Log("P2PickedUp");
+            Vars.delayTimerP2 = Vars.delayP2;
         }
     }
     private void OnTriggerExit(Collider other)
