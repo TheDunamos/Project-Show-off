@@ -22,7 +22,7 @@ public class adobeHell: MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        GlobalVars Vars = VarManager.GetComponent(typeof(GlobalVars)) as GlobalVars;
+       /* GlobalVars Vars = VarManager.GetComponent(typeof(GlobalVars)) as GlobalVars;
         if (Vars.P1Carry == true)
         {
             Vars.LampsOn = true;
@@ -30,7 +30,7 @@ public class adobeHell: MonoBehaviour
         if (Vars.P1Carry == false)
         {
             Vars.LampsOn = false;
-        }
+        }*/
 
     }
 

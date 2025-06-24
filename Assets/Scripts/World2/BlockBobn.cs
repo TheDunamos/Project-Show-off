@@ -10,18 +10,12 @@ public class BlockBobn : MonoBehaviour
 
     void Start()
     {
-        GetComponent<BoxCollider>().enabled = false;
-        VarManager = GameObject.FindGameObjectWithTag("VarManager");
+
     }
 
     void Update()
     {
-        GlobalVars Vars = VarManager.GetComponent(typeof(GlobalVars)) as GlobalVars;
-
-/*        if ()
-        {
-            Move();
-        }*/
+     Move();
 
     }
 

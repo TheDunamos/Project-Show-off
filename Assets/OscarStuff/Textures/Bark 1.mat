@@ -48,7 +48,11 @@ Material:
         m_Scale: {x: 5, y: 9.98}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
-    m_Floats: []
+    m_Floats:
+    - _BumpScale: 0.5
+    - _Metallic: 0
+    - _Smoothness: 0.345
+    - _SmoothnessTextureChannel: 0
     m_Colors:
     - _BaseColor: {r: 0.6132076, g: 0.525412, b: 0.48883057, a: 1}
     - _Color: {r: 0.6132076, g: 0.525412, b: 0.4888305, a: 1}
