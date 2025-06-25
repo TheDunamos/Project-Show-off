@@ -2,15 +2,27 @@ using UnityEngine;
 
 public class Respawn : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private GameObject VarManager;
     void Start()
     {
-        
+        VarManager = GameObject.FindGameObjectWithTag("VarManager");
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        
+
+        GlobalVars Vars = VarManager.GetComponent(typeof(GlobalVars)) as GlobalVars;
+        if (other.gameObject.CompareTag("Player"))
+        {
+            other.transform.position = Vars.P1Respawn.transform.position;
+        }
+        if (other.gameObject.CompareTag("Player2"))
+        {
+            Debug.Log("yes");
+
+            other.transform.position = Vars.P2Respawn.transform.position;
+        }
+
     }
+
 }
