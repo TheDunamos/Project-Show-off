@@ -180210,6 +180210,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Light Layer Light
       objectReference: {fileID: 0}
+    - target: {fileID: 3812098719006326405, guid: b4f4ff58907e2e0488fdb114b8b00a4f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4642668360211443480, guid: b4f4ff58907e2e0488fdb114b8b00a4f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7475070823990778864, guid: b4f4ff58907e2e0488fdb114b8b00a4f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 26.277855
