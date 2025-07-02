@@ -17,6 +17,10 @@ public class GlobalVars : MonoBehaviour
     public float delayP2 = 0.5f;
     public float delayTimerP2 = 0f;
 
+    public GameObject P1Respawn;
+    public GameObject P2Respawn;
+
+
     public bool P1Lamp = false;
     public bool P2Lamp = false;
 
