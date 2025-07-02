@@ -1127,16 +1127,16 @@ MonoBehaviour:
   SpeedChangeRate: 10
   LandingAudioClip: {fileID: 8300000, guid: ff697d3070687ce4583faa0561a145a2, type: 3}
   FootstepAudioClips:
-  - {fileID: 8300000, guid: 72f526a6a9890f643a88e85a61c86c8a, type: 3}
-  - {fileID: 8300000, guid: 85016e0f2b01da248b9663dd49a161b0, type: 3}
-  - {fileID: 8300000, guid: 186de84b3207156479abe98f4958fed0, type: 3}
-  - {fileID: 8300000, guid: 1a91fcd19acf1e54bba0945d9f390849, type: 3}
-  - {fileID: 8300000, guid: 14e8a8d2158bec840b56c54f5266e692, type: 3}
-  - {fileID: 8300000, guid: 29841e7d5bbfb5b419c9ad16ca8bc4c1, type: 3}
-  - {fileID: 8300000, guid: dd1af302b8902684d9381de1f2d3a5af, type: 3}
-  - {fileID: 8300000, guid: 67c8b33e424ccdc4486edf538ab91c5a, type: 3}
-  - {fileID: 8300000, guid: 274649b0e221539409070ebf6c18918b, type: 3}
-  - {fileID: 8300000, guid: a3194b8bbc96ef84fab1f98f4b7dae3e, type: 3}
+  - {fileID: 8300000, guid: 45935e17ea8d78745a275addc14539d6, type: 3}
+  - {fileID: 8300000, guid: 4b046ede81bcb9140ad80882c0b14cb5, type: 3}
+  - {fileID: 8300000, guid: 60f9d862a0ad3fb44beb41f965fe9153, type: 3}
+  - {fileID: 8300000, guid: 35994b6aa14b3a14088500624b745fc9, type: 3}
+  - {fileID: 8300000, guid: 9eb821a8f761569448be1420db901502, type: 3}
+  - {fileID: 8300000, guid: 35e0ef6baabaea2418bea2025652acf9, type: 3}
+  - {fileID: 8300000, guid: 5911aa8d9c5803044a11c5bbd90322b7, type: 3}
+  - {fileID: 8300000, guid: 0c5415f567083cc48a971060086666ca, type: 3}
+  - {fileID: 8300000, guid: 6d9237b9bdb4801438d23629a6e1852f, type: 3}
+  - {fileID: 8300000, guid: e6c8d58c12f477e4086980583b7a0d4d, type: 3}
   FootstepAudioVolume: 0.3
   JumpHeight: 1.2
   Gravity: -15
@@ -1189,6 +1189,7 @@ MonoBehaviour:
   analogMovement: 0
   cursorLocked: 1
   cursorInputForLook: 1
+  interact: 0
 --- !u!114 &4416926081852918493
 MonoBehaviour:
   m_ObjectHideFlags: 0

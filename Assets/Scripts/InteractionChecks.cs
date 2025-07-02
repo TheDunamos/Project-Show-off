@@ -37,6 +37,8 @@ public class InteractionChecks : MonoBehaviour
 
     public UnityEvent onPlayerOnBridge;
     public UnityEvent onPlayerOffBridge;
+    public UnityEvent onIsland;
+    public UnityEvent ofIsland;
 
     private void Start()
     {

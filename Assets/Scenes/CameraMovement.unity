@@ -12980,10 +12980,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c44610a034b9f60428ca7aeacb419ff7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextRespawn: {fileID: 0}
   cam1: {fileID: 1076836001}
   cam2: {fileID: 1079006184}
+  P1Past: 0
   cam3: {fileID: 636080648}
   cam4: {fileID: 2101310471}
+  P2Past: 0
 --- !u!64 &55493670
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -13210,6 +13213,8 @@ MonoBehaviour:
   P2Throwable: 0
   delayP2: 0.5
   delayTimerP2: 0
+  P1Respawn: {fileID: 0}
+  P2Respawn: {fileID: 0}
   P1Lamp: 0
   P2Lamp: 0
   LampsOn: 0
@@ -20235,10 +20240,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c44610a034b9f60428ca7aeacb419ff7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextRespawn: {fileID: 0}
   cam1: {fileID: 2023355699}
   cam2: {fileID: 318555123}
+  P1Past: 0
   cam3: {fileID: 647935081}
   cam4: {fileID: 893912267}
+  P2Past: 0
 --- !u!64 &112597252
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -43262,7 +43270,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: dd0b123fe79ebfd448b908a6825bd373, type: 2}
-  - {fileID: 2100000, guid: dd0b123fe79ebfd448b908a6825bd373, type: 2}
+  - {fileID: 2100000, guid: 3b1f153852e4f61458ecf3294f884151, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -44486,10 +44494,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c44610a034b9f60428ca7aeacb419ff7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextRespawn: {fileID: 0}
   cam1: {fileID: 202267674}
   cam2: {fileID: 1600161379}
+  P1Past: 0
   cam3: {fileID: 1037218667}
   cam4: {fileID: 1359385564}
+  P2Past: 0
 --- !u!64 &338293795
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -54577,10 +54588,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c44610a034b9f60428ca7aeacb419ff7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextRespawn: {fileID: 0}
   cam1: {fileID: 318555123}
   cam2: {fileID: 538053454}
+  P1Past: 0
   cam3: {fileID: 893912267}
   cam4: {fileID: 27749221}
+  P2Past: 0
 --- !u!64 &494105517
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -57674,10 +57688,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c44610a034b9f60428ca7aeacb419ff7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextRespawn: {fileID: 0}
   cam1: {fileID: 1387895676}
   cam2: {fileID: 1595776664}
+  P1Past: 0
   cam3: {fileID: 1989308408}
   cam4: {fileID: 220713535}
+  P2Past: 0
 --- !u!64 &571421995
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -58742,10 +58759,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c44610a034b9f60428ca7aeacb419ff7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextRespawn: {fileID: 0}
   cam1: {fileID: 1600161379}
   cam2: {fileID: 1996569091}
+  P1Past: 0
   cam3: {fileID: 1359385564}
   cam4: {fileID: 1526584700}
+  P2Past: 0
 --- !u!64 &590261534
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -80160,15 +80180,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.485182
+      value: 5.4942856
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.5453391
+      value: -1.5453382
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.9019623
+      value: 5.427849
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -82635,10 +82655,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c44610a034b9f60428ca7aeacb419ff7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextRespawn: {fileID: 0}
   cam1: {fileID: 2023355699}
   cam2: {fileID: 318555123}
+  P1Past: 0
   cam3: {fileID: 647935081}
   cam4: {fileID: 893912267}
+  P2Past: 0
 --- !u!64 &836979495
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -105036,15 +105059,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.012961388
+      value: 0.022064209
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -14.041243
+      value: -14.041242
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -135.33643
+      value: -135.81053
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_LocalRotation.w
@@ -106739,10 +106762,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c44610a034b9f60428ca7aeacb419ff7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextRespawn: {fileID: 0}
   cam1: {fileID: 1996569091}
   cam2: {fileID: 2023355699}
+  P1Past: 0
   cam3: {fileID: 1526584700}
   cam4: {fileID: 647935081}
+  P2Past: 0
 --- !u!64 &1156796824
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -115736,10 +115762,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c44610a034b9f60428ca7aeacb419ff7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextRespawn: {fileID: 0}
   cam1: {fileID: 1595776664}
   cam2: {fileID: 1076836001}
+  P1Past: 0
   cam3: {fileID: 220713535}
   cam4: {fileID: 636080648}
+  P2Past: 0
 --- !u!64 &1262632555
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -116506,7 +116535,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: dd0b123fe79ebfd448b908a6825bd373, type: 2}
-  - {fileID: 2100000, guid: dd0b123fe79ebfd448b908a6825bd373, type: 2}
+  - {fileID: 2100000, guid: 3b1f153852e4f61458ecf3294f884151, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -122328,10 +122357,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c44610a034b9f60428ca7aeacb419ff7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextRespawn: {fileID: 0}
   cam1: {fileID: 318555123}
   cam2: {fileID: 538053454}
+  P1Past: 0
   cam3: {fileID: 893912267}
   cam4: {fileID: 27749221}
+  P2Past: 0
 --- !u!64 &1386109159
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -131433,10 +131465,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c44610a034b9f60428ca7aeacb419ff7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextRespawn: {fileID: 0}
   cam1: {fileID: 202267674}
   cam2: {fileID: 1600161379}
+  P1Past: 0
   cam3: {fileID: 1037218667}
   cam4: {fileID: 1359385564}
+  P2Past: 0
 --- !u!64 &1494315355
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -139248,10 +139283,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c44610a034b9f60428ca7aeacb419ff7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextRespawn: {fileID: 0}
   cam1: {fileID: 1996569091}
   cam2: {fileID: 2023355699}
+  P1Past: 0
   cam3: {fileID: 1526584700}
   cam4: {fileID: 647935081}
+  P2Past: 0
 --- !u!64 &1564398637
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -140116,7 +140154,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: dd0b123fe79ebfd448b908a6825bd373, type: 2}
-  - {fileID: 2100000, guid: dd0b123fe79ebfd448b908a6825bd373, type: 2}
+  - {fileID: 2100000, guid: 3b1f153852e4f61458ecf3294f884151, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -141227,10 +141265,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c44610a034b9f60428ca7aeacb419ff7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextRespawn: {fileID: 0}
   cam1: {fileID: 1600161379}
   cam2: {fileID: 1996569091}
+  P1Past: 0
   cam3: {fileID: 1359385564}
   cam4: {fileID: 1526584700}
+  P2Past: 0
 --- !u!64 &1601812289
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -144216,6 +144257,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   onPlayerOffBridge:
+    m_PersistentCalls:
+      m_Calls: []
+  onIsland:
+    m_PersistentCalls:
+      m_Calls: []
+  ofIsland:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1001 &1626939663
@@ -147654,6 +147701,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   onPlayerOffBridge:
+    m_PersistentCalls:
+      m_Calls: []
+  onIsland:
+    m_PersistentCalls:
+      m_Calls: []
+  ofIsland:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &1655906601
@@ -151623,10 +151676,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c44610a034b9f60428ca7aeacb419ff7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextRespawn: {fileID: 0}
   cam1: {fileID: 1079006184}
   cam2: {fileID: 1770235373}
+  P1Past: 0
   cam3: {fileID: 2101310471}
   cam4: {fileID: 2068005425}
+  P2Past: 0
 --- !u!64 &1734431264
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -156926,10 +156982,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c44610a034b9f60428ca7aeacb419ff7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextRespawn: {fileID: 0}
   cam1: {fileID: 538053454}
   cam2: {fileID: 1387895676}
+  P1Past: 0
   cam3: {fileID: 27749221}
   cam4: {fileID: 1989308408}
+  P2Past: 0
 --- !u!64 &1747602618
 MeshCollider:
   m_ObjectHideFlags: 0
