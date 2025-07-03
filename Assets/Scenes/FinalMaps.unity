@@ -77563,7 +77563,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: dc6bfa48a9e7bc846b6865c29d17bfcd, type: 2}
+  - {fileID: 2100000, guid: 3a9dcc3b880d169428a53ddf6c8569f2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -87149,6 +87149,63 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 6432153550075794594, guid: c8836fa213fa561488f270c49d155f7a, type: 3}
+--- !u!1001 &1065521496
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1569351867715729155, guid: 63867af79475f464d8731d35122af6e3, type: 3}
+      propertyPath: m_Name
+      value: 'LastIslandLight '
+      objectReference: {fileID: 0}
+    - target: {fileID: 8275674219953700845, guid: 63867af79475f464d8731d35122af6e3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 20.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 8275674219953700845, guid: 63867af79475f464d8731d35122af6e3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 8275674219953700845, guid: 63867af79475f464d8731d35122af6e3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 406.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 8275674219953700845, guid: 63867af79475f464d8731d35122af6e3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8275674219953700845, guid: 63867af79475f464d8731d35122af6e3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8275674219953700845, guid: 63867af79475f464d8731d35122af6e3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8275674219953700845, guid: 63867af79475f464d8731d35122af6e3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8275674219953700845, guid: 63867af79475f464d8731d35122af6e3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8275674219953700845, guid: 63867af79475f464d8731d35122af6e3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8275674219953700845, guid: 63867af79475f464d8731d35122af6e3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 63867af79475f464d8731d35122af6e3, type: 3}
 --- !u!1001 &1069290050
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -206421,3 +206478,4 @@ SceneRoots:
   - {fileID: 464797061}
   - {fileID: 206236747}
   - {fileID: 676537097}
+  - {fileID: 1065521496}
