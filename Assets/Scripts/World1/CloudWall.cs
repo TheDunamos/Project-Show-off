@@ -17,6 +17,8 @@ public class CloudWall : MonoBehaviour
         if (Open1 == true && Open2 == true)
         {
             doorAnim.SetTrigger("Open");
+            Open1 = false;
+            Open2 = false;
         }
 
     }
