@@ -13,6 +13,7 @@ TagManager:
   - PickupP1
   - PickupP2
   - Bridge
+  - MovingPlatform
   layers:
   - Default
   - TransparentFX
