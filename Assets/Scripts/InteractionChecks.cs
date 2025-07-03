@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Events;
 using StarterAssets;
+using UnityEngine.SceneManagement;
 
 
 
@@ -55,6 +56,11 @@ public class InteractionChecks : MonoBehaviour
         LeverDoor();
 
         PickupThrow();
+
+        if (Input.GetKeyDown("p"))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 
     public void OnInteract(InputValue value)
@@ -121,7 +127,6 @@ public class InteractionChecks : MonoBehaviour
             onPlayerOffBridge?.Invoke();
         }
     }
-
 
 
     private void LeverDoor()
