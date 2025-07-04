@@ -21,7 +21,9 @@ public class RespawnEnding : MonoBehaviour
             P1.transform.position = Vars.P1Respawn.transform.position;
             P2.transform.position = Vars.P1Respawn.transform.position;
             Physics.SyncTransforms();
+            IslandAnim.ResetTrigger("Open");
             IslandAnim.SetTrigger("Reset");
+  
         }
         if (other.gameObject.CompareTag("Player2"))
         {
@@ -32,6 +34,7 @@ public class RespawnEnding : MonoBehaviour
             P2.transform.position = Vars.P2Respawn.transform.position;
             P1.transform.position = Vars.P2Respawn.transform.position;
             Physics.SyncTransforms();
+            IslandAnim.SetTrigger("Reset");
 
         }
 
