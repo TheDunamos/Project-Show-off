@@ -9,10 +9,27 @@ public class RestartGame : MonoBehaviour
     [Header("Player2")]
     public bool P2Past = false;
 
+    public float DelayTime = 0f;
+    public float Delay = 5f;
+
     private GameObject VarManager;
     void Start()
     {
         VarManager = GameObject.FindGameObjectWithTag("VarManager");
+    }
+    private void Update()
+    {
+        if (P1Past == true && P2Past == true)
+        {
+            if(DelayTime > 0f)
+            {
+                DelayTime -= Time.deltaTime;
+                if(DelayTime <= 0f)
+                {
+                    Reset();
+                }
+            }
+        }
     }
 
     private void Reset()
@@ -29,12 +46,14 @@ public class RestartGame : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             P1Past = true;
-            Reset();
+
+
+       
         }
         if (other.gameObject.CompareTag("Player2"))
         {
             P2Past = true;
-            Reset();
+         
         }
 
     }
